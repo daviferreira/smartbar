@@ -15,16 +15,14 @@
     gulp.task('sass', function () {
         return gulp.src('src/sass/*.scss')
                    .pipe(sass())
-                   .pipe(gulp.dest('src/css'));
+                   .pipe(gulp.dest('dist/css'));
     });
 
     gulp.task('css', ['sass'], function () {
-        gulp.src(['src/css/*.css'])
+        gulp.src(['dist/css/*.css'])
             .pipe(prefix({cascade: true}))
-            .pipe(concat('smartbar.css'))
-            .pipe(gulp.dest('dist/css/'))
-            .pipe(rename('smartbar.min.css'))
             .pipe(minifyCss())
+            .pipe(rename('smartbar.min.css'))
             .pipe(gulp.dest('dist/css/'));
     });
 
