@@ -2,7 +2,6 @@ $black: #333;
 $white: #fafafa;
 $grey: #f2f2f2;
 $red: #cc2b2b;
-
 $primary: #7b6980;
 $secondary: #60a079;
 
@@ -10,15 +9,13 @@ $facebook-color: #3b5998;
 $twitter-color: #00aced;
 $google-plus-color: #dd4b39;
 
-$sans-serif: "Open Sans", sans-serif;
-
 @mixin vertical-align {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.masthead {
+.smartbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -71,6 +68,7 @@ $sans-serif: "Open Sans", sans-serif;
         top: 0;
         border-bottom: 1px solid $black;
         background-color: rgba($primary, .95);
+        color: $white;
         opacity: 1;
         h1 a, nav a {
             color: $white;
@@ -85,7 +83,7 @@ $sans-serif: "Open Sans", sans-serif;
 }
 
 .no-touch {
-    .masthead {
+    .smartbar {
         &[data-visible="true"] {
             h1 a:hover, nav a:hover {
                 color: darken($white, 10);
@@ -116,7 +114,7 @@ $sans-serif: "Open Sans", sans-serif;
 }
 
 @media (max-width:767px) {
-    .masthead {
+    .smartbar {
         h1 {
             display: block;
             margin-bottom: .2em;

@@ -40,7 +40,7 @@
     });
 
     gulp.task('watch', function () {
-        var watcherCSS = gulp.watch('src/scss/**/*.scss', ['css']),
+        var watcherCSS = gulp.watch('src/sass/**/*.scss', ['css']),
             watcherJS = gulp.watch('src/js/**/*.js', ['js']);
         watcherCSS.on('changed', function (event) {
             console.log('File ' + event.path + ' was ' + event.type +
