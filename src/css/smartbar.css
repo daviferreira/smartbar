@@ -1,0 +1,100 @@
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  padding: 1em 2em;
+  width: 100%;
+  border-bottom: 1px solid #e9e5ea;
+  background-color: #fafafa;
+  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+  .masthead h1, .masthead h2 {
+    display: inline-block; }
+  .masthead h1 {
+    margin: 0;
+    color: #333;
+    letter-spacing: -0.075em;
+    font-size: 2em; }
+    .masthead h1 a {
+      color: #333; }
+  .masthead h2 {
+    margin: 0 0 0 0.65em;
+    color: #7b6980;
+    letter-spacing: -0.05em;
+    font-size: 1.25em; }
+  .masthead nav {
+    float: right; }
+    .masthead nav a {
+      display: inline-block;
+      margin-right: 1.2em;
+      color: #333;
+      text-align: right;
+      font-weight: 700;
+      line-height: 2; }
+      .masthead nav a:last-child {
+        margin-right: 0; }
+  .masthead .menu-toggler {
+    display: none; }
+  .masthead[data-visible="false"] {
+    top: -6em;
+    opacity: 0; }
+  .masthead[data-visible="true"] {
+    top: 0;
+    border-bottom: 1px solid #333;
+    background-color: rgba(123, 105, 128, 0.95);
+    opacity: 1; }
+    .masthead[data-visible="true"] h1 a, .masthead[data-visible="true"] nav a {
+      color: #fafafa; }
+    .masthead[data-visible="true"] h2 {
+      color: #f2f2f2; }
+    .masthead[data-visible="true"] .btn {
+      border-color: #fafafa; }
+
+.no-touch .masthead[data-visible="true"] h1 a:hover, .no-touch .masthead[data-visible="true"] nav a:hover {
+  color: #e1e1e1; }
+.no-touch .masthead h1 a:hover {
+  color: #333;
+  text-decoration: none; }
+.no-touch .masthead nav a:hover {
+  color: #60a079; }
+.no-touch .masthead[data-visible="true"] .btn:hover {
+  border-color: #e1e1e1; }
+.no-touch .masthead[data-visible="true"] h1 a:hover {
+  color: #fafafa; }
+
+@media (max-width: 767px) {
+  .masthead h1 {
+    display: block;
+    margin-bottom: 0.2em; }
+  .masthead nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fafafa;
+    box-shadow: 0 0 6px #f2f2f2; }
+    .masthead nav a {
+      display: block;
+      text-align: center;
+      margin-right: 0;
+      padding: 1em;
+      border-bottom: 1px solid #f2f2f2; }
+    .masthead nav .btn {
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #f2f2f2; }
+  .masthead .menu-toggler {
+    display: block;
+    height: 33px;
+    color: #333; }
+  .masthead .icon-menu {
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    line-height: 1; }
+  .masthead.menu-active nav {
+    display: block;
+    margin-top: 0; } }
